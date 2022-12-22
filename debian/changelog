@@ -1,0 +1,241 @@
+pep8 (1.7.1-9) unstable; urgency=medium
+
+  * Team upload.
+  * Drop python2 support; Closes: #937271
+  * Drop transitional pep8 package; Closes: #940736
+
+ -- Sandro Tosi <morph@debian.org>  Fri, 24 Jan 2020 23:26:56 -0500
+
+pep8 (1.7.1-8) unstable; urgency=medium
+
+  [ Emmanuel Arias ]
+  * Use python2 instead of python on autopkgtest (Closes: #947053)
+
+ -- Andrej Shadura <andrewsh@debian.org>  Sun, 29 Dec 2019 10:59:38 +0100
+
+pep8 (1.7.1-7) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Name.
+  * Fix day-of-week for changelog entries 1.4.6-1.1, 0.5.0-1.
+
+  [ Andrej Shadura ]
+  * Call python2 in autopkgtest, not python (Closes: #945134).
+
+ -- Andrej Shadura <andrewsh@debian.org>  Thu, 19 Dec 2019 15:17:11 +0100
+
+pep8 (1.7.1-6) unstable; urgency=medium
+
+  * No change rebuild.
+
+ -- Andrej Shadura <andrewsh@debian.org>  Sun, 27 Oct 2019 22:52:57 +0100
+
+pep8 (1.7.1-5) unstable; urgency=medium
+
+  * Use pybuild to fix FTBFS (not supported with compat level 12).
+
+ -- Andrej Shadura <andrewsh@debian.org>  Sun, 27 Oct 2019 22:41:39 +0100
+
+pep8 (1.7.1-4) unstable; urgency=medium
+
+  [ Helmut Grohne ]
+  * pep8 inherits Multi-Arch: foreign from pycodestyle (Closes: #932672).
+
+  [ Ondřej Nový ]
+  * Use debhelper-compat instead of debian/compat.
+
+  [ Andrej Shadura ]
+  * Run wrap-and-sort -bask.
+  * Bump debhelper from old 9 to 12.
+
+ -- Andrej Shadura <andrewsh@debian.org>  Thu, 26 Sep 2019 14:26:48 +0200
+
+pep8 (1.7.1-3) unstable; urgency=medium
+
+  * Team upload.
+  * autopkgtest: allow stderr in the smoke tests since pep8 is not printing
+    a deprecation warning to move to pycodestyle.
+
+ -- Mattia Rizzolo <mattia@debian.org>  Thu, 20 Dec 2018 23:07:43 +0100
+
+pep8 (1.7.1-2) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Ondřej Nový ]
+  * d/control: Set Vcs-* to salsa.debian.org.
+  * d/control: Deprecating priority extra as per policy 4.0.1.
+  * d/tests: Use AUTOPKGTEST_TMP instead of ADTTMP.
+  * Convert git repository from git-dpm to gbp layout.
+
+  [ Chris Lamb ]
+  * Respect nocheck in DEB_BUILD_OPTIONS.
+
+  [ Mattia Rizzolo ]
+  * Add patch to be fully compatible with Python 3.7.  Closes: #908700
+
+ -- Mattia Rizzolo <mattia@debian.org>  Thu, 20 Dec 2018 14:28:23 +0100
+
+pep8 (1.7.1-1) unstable; urgency=medium
+
+  * New upstream release
+  * Standards-Version updated to 4.1.1
+  * Silent a test failure wrt the pycodestyle transition
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Mon, 30 Oct 2017 09:20:55 +0100
+
+pep8 (1.7.0-4) unstable; urgency=medium
+
+  * Team upload.
+  * d/source/format: Changed to 3.0 (quilt)
+  * Added dh-python to build depends
+
+ -- Ondřej Nový <onovy@debian.org>  Tue, 23 Aug 2016 18:27:07 +0200
+
+pep8 (1.7.0-3) unstable; urgency=medium
+
+  * Team upload.
+  * Fixed homepage (https)
+  * Fixed VCS URL (https)
+  * Change directory to $ADTTMP before running Debian tests
+  * Standards-Version is 3.9.8 now (no change)
+  * Make pep8 transitional package which provides symlink
+    pep8 -> pycodestyle (Closes: #823591)
+  * Fixed typo in debian/pep8.1
+  * Bumped debhelper compat version to 9
+  * Fixed Breaks+Replaces for splitting into python-pep8 package
+    (Closes: #817187)
+
+ -- Ondřej Nový <onovy@debian.org>  Fri, 12 Aug 2016 15:40:05 +0200
+
+pep8 (1.7.0-2) unstable; urgency=medium
+
+  * Team upload.
+  * d/control: Bump Standards-Version with no other changes necessary.
+  * d/watch: Use pypi.debian.net redirector.
+  * d/tests: Added simple DEP-8 tests.
+
+ -- Barry Warsaw <barry@debian.org>  Mon, 14 Mar 2016 11:53:51 -0400
+
+pep8 (1.7.0-1) unstable; urgency=medium
+
+  * Team upload
+    - Maintainer is ok, doesn't have time anymore
+  * New upstream release (Closes: #816488)
+  * Package moved under the Python team umbrella
+  * Package moved under git maintenance (Closes: #816489)
+  * Run the test suite when building the package
+
+  [ Matthias Klose ]
+  * Let the pep8 binary use python3 (Closes: #807409)
+  * Build a python-pep8 package.
+  * Don't depend on setuptools, pkg-resources is good enough.
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Wed, 02 Mar 2016 13:08:38 +0100
+
+pep8 (1.6.2-0.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * New upstream release (Closes: #788117).
+
+ -- Daniel Stender <debian@danielstender.com>  Tue, 28 Jul 2015 16:04:09 +0200
+
+pep8 (1.5.7-2) unstable; urgency=medium
+
+  * Reinsert missing changelog entry.
+
+ -- David Watson <dwatson@debian.org>  Wed, 23 Jul 2014 13:12:38 +0100
+
+pep8 (1.5.7-1) unstable; urgency=medium
+
+  [ David Watson ]
+  * New upstream release. (Closes: #754985)
+  * Remove python3-all-dev build-dep. (Closes: #751538)
+  * Update standards version.
+
+  [ Michael Prokop ]
+  * Update manpage. (Closes: #749468)
+
+ -- David Watson <dwatson@debian.org>  Wed, 23 Jul 2014 10:04:53 +0100
+
+pep8 (1.4.6-1.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Use python3* dependencies in the python3-pep8 package. (Closes: #721157)
+
+ -- Dmitrijs Ledkovs <dmitrij.ledkov@ubuntu.com>  Wed, 02 Oct 2013 09:53:08 +0100
+
+pep8 (1.4.6-1) unstable; urgency=low
+
+  [ David Watson ]
+  * New upstream release
+
+  [ Thomas Goirand ]
+  * Added support for python3. (Closes: #694564)
+
+ -- David Watson <dwatson@debian.org>  Wed, 21 Aug 2013 10:47:20 +0100
+
+pep8 (1.4.5-1) unstable; urgency=low
+
+  * New upstream release. (Closes: #712086)
+
+ -- David Watson <dwatson@debian.org>  Thu, 13 Jun 2013 14:54:03 +0100
+
+pep8 (1.4.4-1) unstable; urgency=low
+
+  * New upstream release. (Closes: #694443)
+
+ -- David Watson <dwatson@debian.org>  Wed, 06 Mar 2013 13:52:24 +0000
+
+pep8 (1.2-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- David Watson <dwatson@debian.org>  Wed, 20 Jun 2012 15:37:05 +0100
+
+pep8 (1.0.1-1) unstable; urgency=low
+
+  * New upstream release.
+  * Update Standards version, no changes needed.
+
+ -- David Watson <dwatson@debian.org>  Thu, 26 Apr 2012 17:22:13 +0100
+
+pep8 (0.6.1-2) unstable; urgency=low
+
+  * Revert depends change. (Closes: #637920)
+  * Update Standards version, no changes needed.
+
+ -- David Watson <dwatson@debian.org>  Mon, 15 Aug 2011 20:56:11 +0100
+
+pep8 (0.6.1-1) unstable; urgency=low
+
+  * New upstream release. (Closes: #635562)
+  * Remove depends on python-setuptools. (Closes: #581019)
+  * Update Standards version, no changes needed.
+
+ -- David Watson <dwatson@debian.org>  Sat, 06 Aug 2011 21:27:14 +0100
+
+pep8 (0.5.0-1) unstable; urgency=low
+
+  * New upstream release
+  * Updated Standards version, no changes needed.
+
+ -- David Watson <david@bashton.com>  Tue, 16 Mar 2010 19:18:00 +0000
+
+pep8 (0.4.2-3) unstable; urgency=low
+
+  * Improve short and long descriptions. (Closes: #554944)
+
+ -- David Watson <david@bashton.com>  Fri, 22 Jan 2010 16:30:48 +0000
+
+pep8 (0.4.2-2) unstable; urgency=low
+
+  * Add missing depends on python-setuptools. Closes (#552259).
+
+ -- David Watson <david@bashton.com>  Mon, 26 Oct 2009 10:11:29 +0000
+
+pep8 (0.4.2-1) unstable; urgency=low
+
+  * Initial release (Closes: #552081)
+
+ -- David Watson <david@bashton.com>  Fri, 23 Oct 2009 10:11:07 +0100

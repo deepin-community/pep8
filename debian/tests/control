@@ -1,0 +1,7 @@
+Test-Command: cd "$AUTOPKGTEST_TMP" ; python3 -c "import pep8; print(pep8.__version__)"
+
+Tests: smoketest-3.sh
+Depends:
+ pep8,
+ python3-pep8
+Restrictions: allow-stderr

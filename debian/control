@@ -1,0 +1,29 @@
+Source: pep8
+Section: python
+Priority: optional
+Uploaders:
+ David Watson <dwatson@debian.org>,
+ Sylvestre Ledru <sylvestre@debian.org>
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Build-Depends:
+ debhelper-compat (= 12),
+ dh-python,
+ python3-all,
+ python3-setuptools
+Standards-Version: 4.1.1
+Homepage: https://pypi.python.org/pypi/pep8
+Vcs-Git: https://salsa.debian.org/python-team/modules/pep8.git
+Vcs-Browser: https://salsa.debian.org/python-team/modules/pep8
+
+Package: python3-pep8
+Architecture: all
+Depends:
+ python3-pkg-resources,
+ ${misc:Depends},
+ ${python3:Depends}
+Description: Python PEP 8 code style checker - Python 3
+ Features a plugin architecture allowing for adding new checks is easily.
+ Parseable output listing line numbers of the error location.  Consists of
+ just one Python file, and requires only stdlib.
+ .
+ Python 3 version.

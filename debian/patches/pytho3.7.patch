@@ -1,0 +1,30 @@
+Description: compatibility with Python3.7
+Origin: https://github.com/PyCQA/pycodestyle/commit/3d37ea0aa2e369852c98bbbcaef8a89ed00996dc
+Acked-By: Mattia Rizzolo <mattia@debian.org>
+Bug-Debian: https://bugs.debian.org/908700
+Last-Update: 2018-12-20
+
+--- a/pep8.py
++++ b/pep8.py
+@@ -107,7 +107,7 @@
+ RERAISE_COMMA_REGEX = re.compile(r'raise\s+\w+\s*,.*,\s*\w+\s*$')
+ ERRORCODE_REGEX = re.compile(r'\b[A-Z]\d{3}\b')
+ DOCSTRING_REGEX = re.compile(r'u?r?["\']')
+-EXTRANEOUS_WHITESPACE_REGEX = re.compile(r'[[({] | []}),;:]')
++EXTRANEOUS_WHITESPACE_REGEX = re.compile(r'[\[({] | [\]}),;:]')
+ WHITESPACE_AFTER_COMMA_REGEX = re.compile(r'[,;:]\s*(?:  |\t)')
+ COMPARE_SINGLETON_REGEX = re.compile(r'(\bNone|\bFalse|\bTrue)?\s*([=!]=)'
+                                      r'\s*(?(1)|(None|False|True))\b')
+@@ -190,10 +190,10 @@
+     """
+     if line_number == total_lines:
+         stripped_last_line = physical_line.rstrip()
+-        if not stripped_last_line:
++        if physical_line and not stripped_last_line:
+             return 0, "W391 blank line at end of file"
+         if stripped_last_line == physical_line:
+-            return len(physical_line), "W292 no newline at end of file"
++            return len(lines[-1]), "W292 no newline at end of file"
+ 
+ 
+ def maximum_line_length(physical_line, max_line_length, multiline):
